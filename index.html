@@ -88,16 +88,77 @@
                 </div>
 				<div class="col-12 col-sm align-self-center">
 		 <a role="button" class="btn btn-block nav-link btn-warning"
-                        data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
-                        data-placement="bottom" href="#table">Reserve Table</a>
+                        data-toggle="modal" data-target="#reserve">Reserve Table</a>
 
 				</div>
             </div>
         </div>
     </header>
+	
+	  <div id="reserve" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+				
+				
+                     <form>
+							<div class="form-group  row form-check-inline ">
+                        <label for="radio" class="radio-inline form-check-label col-12 col-md-4 col-form-label">Number of Guests</label>
+                        <div class="col-md-8">
+                            <input class="form-check-input" type="radio" name="radio" checked > 1
+							<input class="form-check-input" type="radio" name="radio" > 2
+							<input class="form-check-input" type="radio" name="radio" > 3
+							<input class="form-check-input" type="radio" name="radio" > 4
+							<input class="form-check-input" type="radio" name="radio" > 5
+							<input class="form-check-input" type="radio" name="radio" > 6
+                        </div>
+                    </div><br>
+					
+					<div class="form-group  row form-check-inline">
+					<label for="radio" class="radio-inline form-check-label col-12 col-md-5 col-form-label">Section</label>
+					<div class="col-md-7 btn-group btn-group-toggle" data-toggle="buttons">
+						<label class="btn btn-success active ">
+						
+						<input class="form-check-input" type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
+					</label>
+						<label class="btn btn-danger">
+						<input class="form-check-input" type="radio" name="options" id="option2" autocomplete="off"> Smoking
+					</label>
+					</div>
+					</div>
+
+					<div class="form-group  row">
+                        <label for="telnum" class="col-12 col-md-2 col-form-label">Date and Time</label>
+                        <div class=" col-md-4">
+                            <input type="text" class="form-control" id="areacode" name="areacode" placeholder="Date">
+                        </div>
+                        <div class=" col-md-4">
+                            <input type="text" class="form-control" id="telnum" name="telnum" placeholder="Time">
+                        </div>
+                    </div>
+
+					 <div class="form-group  row">
+                        <div class="offset-md-2 col-12 col-md-10">
+							<button type="cancel" class="btn btn-secondary">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Reserve</button>
+                        </div>
+                    </div>
+					</form>
+					
+					
+                </div>
+            </div>
+        </div>
+    </div>
+	
 
   <div class="container">
-	
+  
 		<div class="row row-content">
            <div class="col">
 				<div id="mycarousel" class="carousel slide" data-ride="carousel">
@@ -307,11 +368,7 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	
-	<script>
-        $(document).ready(function(){
-            $('[data-toggle="tooltip"]').tooltip();
-        });
-    </script>
+
 </body>
 
 </html>
